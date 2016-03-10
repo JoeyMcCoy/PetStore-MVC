@@ -1,0 +1,33 @@
+﻿@model IEnumerable<JoeysPetStore.Models.Pet>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Inventory</h2>
+
+
+
+    
+        
+       
+         
+    @foreach (var item in Model)
+    {
+        
+            <h5><strong>@Html.DisplayFor(modelItem => item.Name)</strong></h5>    
+            @Html.ActionLink("Details", "Details", new { id = item.ID })
+
+           
+            <p>@Html.DisplayFor(modelItem => item.Description)</p>
+               
+          
+            
+          
+             
+                
+               
+           
+    }
+
+
