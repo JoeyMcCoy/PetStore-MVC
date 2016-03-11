@@ -18,6 +18,10 @@ namespace JoeysPetStore.Models
     }
     public class PetDBContext : DbContext
     {
+        public PetDBContext(): base("SQLAzureConnection")
+        {
+            Database.SetInitializer<PetDBContext>(new DropCreateDatabaseIfModelChanges<PetDBContext>());
+        }
         public DbSet<Pet> Pets { get; set; }
     }
 }

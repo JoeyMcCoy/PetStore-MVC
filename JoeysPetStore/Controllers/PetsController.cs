@@ -12,6 +12,7 @@ namespace JoeysPetStore.Controllers
 {
     public class PetsController : Controller
     {
+      
         private PetDBContext db = new PetDBContext();
 
         // GET: Pets
