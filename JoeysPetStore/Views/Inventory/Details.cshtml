@@ -6,55 +6,61 @@
 
 <h2>Details</h2>
 
-<div>
-    <h4>Pet</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DateRecieved)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DateRecieved)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Quantity)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Quantity)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-
-    </dl>
-</div>
-<p>
+<div class="row">
+    <div class="col-md-2">
+        <img src='@Url.Content("~/Content/images/Placeholder-pet.png")' alt="pet" />
+        <h3 style="padding-left:5px;" >
+            <strong>
+               $ @Html.DisplayFor(model => model.Price)
+            </strong>
+        </h3>
+    </div>
     
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    <div class="col-md-10">
+        <h1>
+            <strong>
+                @Html.DisplayFor(model => model.Name)
+            </strong>
+        </h1>
+
+
+        <h4>
+            <strong>
+                Description:
+            </strong>
+        </h4>
+        <p>
+            @Html.DisplayFor(model => model.Description)
+        </p>
+
+        <h4>
+            <strong>
+                Date Received:
+            </strong>
+        </h4>
+
+        <p>
+            @Html.DisplayFor(model => model.DateRecieved)
+        </p>
+
+        <h4>
+            <strong>
+                Quantity:
+            </strong>
+        </h4>
+
+        <p>
+            @Html.DisplayFor(model => model.Quantity)
+        </p>
+
+    </div>
+</div>
+
+
+
+    <p>
+
+        @Html.ActionLink("Back to List", "Index")
+    </p>
 
 
