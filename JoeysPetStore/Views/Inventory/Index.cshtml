@@ -14,20 +14,18 @@
          
     @foreach (var item in Model)
     {
-        
-            <h5><strong>@Html.DisplayFor(modelItem => item.Name)</strong></h5>    
-            @Html.ActionLink("Details", "Details", new { id = item.ID })
+    <div class="row">
+        <div class="col-md-2">
+            <img src='@Url.Content("~/Content/images/Placeholder-pet.png")' alt="pet" />
+        </div>
+            <div class="col-md-10">
+                <h5><strong>@Html.DisplayFor(modelItem => item.Name)</strong></h5>
+                @Html.ActionLink("View", "Details", new { id = item.ID })
+                <p>@Html.DisplayFor(modelItem => item.Description)</p>
+            </div>        
+     </div><br />
 
-           
-            <p>@Html.DisplayFor(modelItem => item.Description)</p>
-               
-          
-            
-          
-             
-                
-               
-           
+
     }
 
 
